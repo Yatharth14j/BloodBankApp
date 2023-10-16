@@ -47,7 +47,7 @@ const loginController = async (req, res) => {
 
     //check role
     if (user.role !== req.body.role) {
-      res.send(500).send({
+      res.status(500).send({
         success: false,
         message: "role does not match",
       });
